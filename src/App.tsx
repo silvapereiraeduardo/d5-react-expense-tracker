@@ -36,7 +36,9 @@ const App = () => {
     let expenseCount = 0;
 
     for (let i in filteredList) {
-      if (categories[filteredList[i].category].expense) {
+      let currentCategory = filteredList[i].category;
+
+      if (categories[currentCategory].expense) {
         expenseCount += filteredList[i].value;
       } else {
         incomeCount += filteredList[i].value;
