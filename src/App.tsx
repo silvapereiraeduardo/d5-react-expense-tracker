@@ -48,24 +48,27 @@ const App = () => {
   }, [filteredList]);
 
   return (
-    <C.Container>
-      <C.Header>
-        <C.HeaderText>Sistema Financeiro</C.HeaderText>
-      </C.Header>
+    <>
+      <C.GlobalStyles />
+      <C.Container>
+        <C.Header>
+          <C.HeaderText>Sistema Financeiro</C.HeaderText>
+        </C.Header>
 
-      <C.Body>
-        <InfoArea
-          currentMonth={currentMonth}
-          onMonthChange={handleMonthChange}
-          income={income}
-          expense={expense}
-        />
+        <C.Body>
+          <InfoArea
+            currentMonth={currentMonth}
+            onMonthChange={handleMonthChange}
+            income={income}
+            expense={expense}
+          />
 
-        <InputArea onAdd={handleAddItem} />
+          <InputArea onAdd={handleAddItem} />
 
-        <TableArea list={filteredList} />
-      </C.Body>
-    </C.Container>
+          <TableArea list={filteredList} />
+        </C.Body>
+      </C.Container>
+    </>
   );
 };
 
